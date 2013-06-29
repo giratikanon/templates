@@ -27,6 +27,9 @@ clean:
 
 .SECONDARY:
 
+css/lib.css: css/bootstrap-responsive.min.css css/bootstrap.min.css
+	cat $^ >$@
+
 build/jquery.js:
 	mkdir -p build
 	curl --raw -o $@ 'http://code.jquery.com/jquery-2.0.0.min.js'
